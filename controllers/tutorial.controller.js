@@ -21,9 +21,9 @@ exports.createComment = (tutorialId, comment) => {
     return Comment.create({
         name: comment.name,
         text: comment.text,
-        tutorialId: comment.tutorialId
+        tutorialId: tutorialId
     }).then((comment)=>{
-        console.log(">>Create comment: " +JSON.stringify(comment, null, 4));
+        console.log(">>Create comment: " + JSON.stringify(comment, null, 4));
         return comment;
     }).catch((error)=>{
         console.log(">>Error while creating comment: ", error);
